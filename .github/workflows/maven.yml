@@ -33,6 +33,7 @@ jobs:
             ${{ runner.os }}-maven-
       - name: Install dependencies
         run: |
+          mvn dependency:resolve -U
           mvn clean install -DskipTests=true -Dmaven.javadoc.skip=true --batch-mode --show-version --file pom.xml
       - name: Run tests with Maven
         run: mvn test --batch-mode --file pom.xml
