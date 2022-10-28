@@ -64,7 +64,7 @@ jobs:
         run: mvn clean install -DskipTests
 
       - name: Check out inventory core repository
-        uses: actions/checkout@develop
+        uses: actions/checkout@main
         with:
           repository: savannahghi/openmrs-module-inventory
 
@@ -73,7 +73,7 @@ jobs:
         run: mvn clean install -DskipTests
 
       - name: Check out kenyaemr repository
-        uses: actions/checkout@v18.0.3
+        uses: actions/checkout@master
         with:
           repository: palladiumkenya/openmrs-module-kenyaemr
 
