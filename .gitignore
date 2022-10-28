@@ -6,6 +6,7 @@
 .project
 .classpath
 *.iml
+target
 .idea
 .DS_Store
 .vscode
