@@ -83,20 +83,20 @@ jobs:
 
       - name: Check out kenyaemrdq
         uses: actions/checkout@v1.4.0
-      - name: Get tags
-        run: git fetch --tags origin
         with:
           repository: palladiumkenya/openmrs-module-kenyadq
+      - name: Get tags
+        run: git fetch --tags origin
 
       - name: compile and build kenyaemrdq
         run: mvn clean install -DskipTests
 
       - name: Check out kenyaemrorderentry
         uses: actions/checkout@v1.3.0
-      - name: Get tags
-        run:  git fetch --tags origin
         with:
           repository: palladiumkenya/openmrs-module-kenyaemrorderentry
+      - name: Get tags
+        run: git fetch --tags origin
 
       - name: compile and build kenyaemrorderentry
         run: mvn clean install -DskipTests
