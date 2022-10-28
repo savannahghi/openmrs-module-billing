@@ -67,18 +67,18 @@ jobs:
       - name: Check out inventory core repository
         uses: actions/checkout@develop
         with:
-            repository: savannahghi/openmrs-module-inventory
+          repository: savannahghi/openmrs-module-inventory
 
-            - name: Compile and build inventory core repository
-              run: mvn clean install -DskipTests
+     - name: Compile and build inventory core repository
+        run: mvn clean install -DskipTests
 
       - name: Check out kenyaemr repository
-          uses: actions/checkout@v17.0.3
-          with:
-            repository: palladiumkenya/openmrs-module-kenyaemr
+        uses: actions/checkout@v17.0.3
+        with:
+          repository: palladiumkenya/openmrs-module-kenyaemr
 
-              - name: Compile and build kenyaemr repository
-                run: mvn clean install -DskipTests
+      - name: Compile and build kenyaemr repository
+        run: mvn clean install -DskipTests
 
 
       - uses: actions/checkout@v3
