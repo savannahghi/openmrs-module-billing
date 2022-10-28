@@ -63,13 +63,13 @@ jobs:
       - name: Compile and build hospital core repository
         run: mvn clean install -DskipTests
 
-
       - name: Check out inventory core repository
         uses: actions/checkout@develop
         with:
           repository: savannahghi/openmrs-module-inventory
 
-     - name: Compile and build inventory core repository
+
+      - name: Compile and build inventory core repository
         run: mvn clean install -DskipTests
 
       - name: Check out kenyaemr repository
