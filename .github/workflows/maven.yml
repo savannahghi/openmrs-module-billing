@@ -56,7 +56,7 @@ jobs:
         run: mvn clean install -DskipTests
 
       - name: Check out hospital core repository
-        uses: actions/checkout@develop
+        uses: actions/checkout@master
         with:
          repository: savannahghi/openmrs-module-hospitalcore
 
