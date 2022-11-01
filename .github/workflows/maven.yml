@@ -39,7 +39,7 @@ jobs:
             restore-keys: ${{ runner.os }}-m2
 
       - name: Check out kenya core repository
-        uses: actions/checkout@3.0.1
+        uses: actions/checkout@v3.0.1
         with:
           repository: palladiumkenya/openmrs-module-kenyacore
 
