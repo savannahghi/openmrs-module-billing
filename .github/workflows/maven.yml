@@ -1,6 +1,10 @@
-name: Build and Test with Maven
+name:  Maven CI/CD
 
-on: [push]
+on:
+  push:
+    branches: [ main ]
+    pull_request:
+      branches: [ main ]
 
 jobs:
   build:
@@ -31,13 +35,12 @@ jobs:
           maven-version: ${{ matrix.maven }}
 
       # Enable caching dependencies to speed up the build
-      - name: Cache local Maven repository
-        uses: actions/cache@v2
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
+      - name: Cache the Maven packages to speed up build
+          uses: actions/cache@v1
+          with:
+            path: ~/.m2
+            key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+            restore-keys: ${{ runner.os }}-m2
 
       - name: Check out kenya core repository
         uses: actions/checkout@master
