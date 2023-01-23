@@ -55,7 +55,7 @@ jobs:
         run: mvn clean install -DskipTests
 
       - name: Check out kenyaemr repository
-        uses: actions/checkout@v17.0.3
+        uses: actions/checkout@17.0.3
         with:
           repository: savannahghi/openmrs-module-kenyaemr
 
