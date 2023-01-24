@@ -55,13 +55,6 @@ jobs:
       - name: Compile and build kenya UI repository
         run: mvn clean install -DskipTests
 
-      - name: Check out kenyaemrdq
-        uses: actions/checkout@master
-        with:
-          repository: palladiumkenya/openmrs-module-kenyadq
-
-      - name: compile and build kenyaemrdq
-        run: mvn clean install -DskipTests
 
       - name: Check out kenyaemrorderentry
         uses: actions/checkout@master
@@ -85,6 +78,14 @@ jobs:
           repository: savannahghi/openmrs-module-kenyaemr
 
       - name: Compile and build kenyaemr repository
+        run: mvn clean install -DskipTests
+
+      - name: Check out kenyaemrdq
+        uses: actions/checkout@master
+        with:
+          repository: palladiumkenya/openmrs-module-kenyadq
+
+      - name: compile and build kenyaemrdq
         run: mvn clean install -DskipTests
 
       - name: Check out hospital core repository
