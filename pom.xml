@@ -43,7 +43,7 @@
 		<uiframeworkVersion>3.8</uiframeworkVersion>
         <kenyauiVersion>3.0.0</kenyauiVersion>
         <kenyacoreVersion>3.0.1</kenyacoreVersion>
-		<kenyaemrVersion>18.4.2</kenyaemrVersion>
+		<kenyaemrVersion>17.0.3</kenyaemrVersion>
 		<jodaTimeVersion>2.9.1</jodaTimeVersion>
 		<webservices.restVersion>2.1</webservices.restVersion>
 		<uilibraryVersion>2.0.4</uilibraryVersion>

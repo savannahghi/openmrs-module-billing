@@ -54,6 +54,30 @@ jobs:
       - name: Compile and build kenya UI repository
         run: mvn clean install -DskipTests
 
+      - name: Check out kenyaemrdq
+        uses: actions/checkout@master
+        with:
+          repository: palladiumkenya/openmrs-module-kenyadq
+
+      - name: compile and build kenyaemrdq
+        run: mvn clean install -DskipTests
+
+      - name: Check out kenyaemrorderentry
+        uses: actions/checkout@master
+        with:
+          repository: palladiumkenya/openmrs-module-kenyaemrorderentry
+
+      - name: compile and build kenyaemrorderentry
+        run: mvn clean install -DskipTests
+
+      - name: Check out facilityreporting
+        uses: actions/checkout@v1.2.0
+        with:
+          repository: palladiumkenya/openmrs-module-facilityreporting
+
+      - name: compile and build facilityreporting
+        run: mvn clean install -DskipTests
+
       - name: Check out kenyaemr repository
         uses: actions/checkout@master
         with:
@@ -75,39 +99,8 @@ jobs:
         with:
           repository: savannahghi/openmrs-module-inventory
 
-
       - name: Compile and build inventory core repository
         run: mvn clean install -DskipTests
-
-
-      - name: Check out kenyaemrdq
-        uses: actions/checkout@master
-        with:
-          repository: palladiumkenya/openmrs-module-kenyadq
-      - name: Get tags
-        run: git fetch --tags origin
-
-      - name: compile and build kenyaemrdq
-        run: mvn clean install -DskipTests
-
-      - name: Check out kenyaemrorderentry
-        uses: actions/checkout@master
-        with:
-          repository: palladiumkenya/openmrs-module-kenyaemrorderentry
-      - name: Get tags
-        run: git fetch --tags origin
-
-      - name: compile and build kenyaemrorderentry
-        run: mvn clean install -DskipTests
-
-      - name: Check out facilityreporting
-        uses: actions/checkout@v1.2.0
-        with:
-          repository: palladiumkenya/openmrs-module-facilityreporting
-
-      - name: compile and build facilityreporting
-        run: mvn clean install -DskipTests
-
 
       - uses: actions/checkout@v3
       - name: Install dependencies
