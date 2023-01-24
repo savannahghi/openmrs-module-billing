@@ -67,14 +67,6 @@ jobs:
       - name: compile and build kenyaemrorderentry
         run: mvn clean install -DskipTests
 
-      - name: Check out facilityreporting
-        uses: actions/checkout@v3
-        with:
-          repository: openmrs/openmrs-module-reporting
-          ref: 037bb36d
-
-      - name: compile and build facilityreporting
-        run: mvn clean install -DskipTests
 
       - name: Check out kenyaemrdq
         uses: actions/checkout@v3
