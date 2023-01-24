@@ -49,58 +49,66 @@ jobs:
         run: mvn clean install -DskipTests
 
       - name: Check out kenya UI repository
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
         with:
           repository: palladiumkenya/openmrs-module-kenyaui
+          ref: master
 
       - name: Compile and build kenya UI repository
         run: mvn clean install -DskipTests
 
 
       - name: Check out kenyaemrorderentry
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
         with:
           repository: palladiumkenya/openmrs-module-kenyaemrorderentry
+          ref: master
 
       - name: compile and build kenyaemrorderentry
         run: mvn clean install -DskipTests
 
       - name: Check out facilityreporting
-        uses: actions/checkout@v1.2.0
+        uses: actions/checkout@v3
         with:
           repository: palladiumkenya/openmrs-module-facilityreporting
+          ref: 0.9.8.1
 
       - name: compile and build facilityreporting
         run: mvn clean install -DskipTests
 
-      - name: Check out kenyaemr repository
-        uses: actions/checkout@master
-        with:
-          repository: savannahghi/openmrs-module-kenyaemr
-
-      - name: Compile and build kenyaemr repository
-        run: mvn clean install -DskipTests
-
       - name: Check out kenyaemrdq
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
         with:
           repository: palladiumkenya/openmrs-module-kenyadq
+          ref: 1.2
 
       - name: compile and build kenyaemrdq
         run: mvn clean install -DskipTests
 
+
+      - name: Check out kenyaemr repository
+        uses: actions/checkout@v3
+        with:
+          repository: savannahghi/openmrs-module-kenyaemr
+          ref: v17.0.3
+
+      - name: Compile and build kenyaemr repository
+        run: mvn clean install -DskipTests
+
       - name: Check out hospital core repository
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
         with:
          repository: savannahghi/openmrs-module-hospitalcore
+         ref: develop
 
       - name: Compile and build hospital core repository
         run: mvn clean install -DskipTests
 
       - name: Check out inventory core repository
-        uses: actions/checkout@main
+        uses: actions/checkout@v3
         with:
           repository: savannahghi/openmrs-module-inventory
+          ref: main
 
       - name: Compile and build inventory core repository
         run: mvn clean install -DskipTests
