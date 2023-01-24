@@ -71,7 +71,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: palladiumkenya/openmrs-module-facilityreporting
-          ref: 0.9.8.1
+          ref: 037bb36d
 
       - name: compile and build facilityreporting
         run: mvn clean install -DskipTests
