@@ -70,7 +70,7 @@ jobs:
       - name: Check out facilityreporting
         uses: actions/checkout@v3
         with:
-          repository: palladiumkenya/openmrs-module-facilityreporting
+          repository: openmrs/openmrs-module-reporting
           ref: 037bb36d
 
       - name: compile and build facilityreporting
