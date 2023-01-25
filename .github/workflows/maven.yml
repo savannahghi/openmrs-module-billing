@@ -57,17 +57,6 @@ jobs:
       - name: Compile and build kenya UI repository
         run: mvn clean install -DskipTests
 
-
-      - name: Check out kenyaemrorderentry
-        uses: actions/checkout@v3
-        with:
-          repository: palladiumkenya/openmrs-module-kenyaemrorderentry
-          ref: master
-
-      - name: compile and build kenyaemrorderentry
-        run: mvn clean install -DskipTests
-
-
       - name: Check out kenyaemr repository
         uses: actions/checkout@v3
         with:
