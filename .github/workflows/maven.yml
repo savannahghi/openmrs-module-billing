@@ -81,7 +81,7 @@ jobs:
           repository: uonafya/ehrconfigs
           ref: 2.x
 
-      - name: Compile and build hospital core repository
+      - name: Compile and build configs repository
         run: mvn clean install -DskipTests
 
       - name: Check out inventory core repository
