@@ -43,7 +43,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: palladiumkenya/openmrs-module-kenyacore
-          ref: openmrs-2.4.x-upgrade
+          ref: dev_1
 
       - name: Compile and build kenya core repository
         run: mvn clean install -DskipTests
